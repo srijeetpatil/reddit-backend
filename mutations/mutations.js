@@ -1,0 +1,10 @@
+const { createAccount } = require("../model/model");
+
+const createAccountMutation = async (args) => {
+  const { input } = args;
+  return await createAccount(input);
+};
+
+module.exports = {
+  createAccountMutation,
+};
