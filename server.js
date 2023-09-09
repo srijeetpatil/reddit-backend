@@ -1,8 +1,8 @@
 var express = require("express");
 var express_graphql = require("express-graphql").graphqlHTTP;
 
-const schema = require("./schema/schema");
-const root = require("./graphql/root");
+const schema = require("./schema");
+const root = require("./graphql");
 
 var app = express();
 app.use(

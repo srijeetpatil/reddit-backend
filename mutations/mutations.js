@@ -1,4 +1,4 @@
-const { createAccount } = require("../model/model");
+const { createAccount } = require("../model");
 
 const createAccountMutation = async (args) => {
   const { input } = args;
