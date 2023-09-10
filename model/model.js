@@ -6,7 +6,7 @@ const getAllUsersFromDB = async () => {
     let data = [];
     pool.query("select * from users", (error, results) => {
       if (error) {
-        throw reject(error);
+        return reject(error);
       }
       data = results.rows;
 
@@ -23,7 +23,7 @@ const createAccount = async (userDetails) => {
       `insert into users(username, password, uid) values('${username}', '${hash}', 0)`,
       (error) => {
         if (error) {
-          throw reject(error);
+          return reject(error);
         }
 
         return resolve(true);
